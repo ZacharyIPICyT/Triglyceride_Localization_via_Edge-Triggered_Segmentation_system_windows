@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "triglyceride-analysis-system"
+version = "1.0.0"
+authors = [
+    {name = "Marco Zachary Moreno Bautista", email = "marco.moreno@ipicyt.edu.mx"}
+]
+description = "Triglyceride Localization via Edge-Triggered Segmentation System"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering :: Image Processing"
+]
+
+[project.scripts]
+triglyceride-analysis = "src.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
